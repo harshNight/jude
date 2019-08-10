@@ -3,6 +3,15 @@ session_start();
 if(!isset($_SESSION['username'])){
     header('location:../login.php');
 }
+if(!isset($_GET['id']) || empty($_GET['id'])){
+// create a log
+header('location:index.php');
+}else {
+    // check if the id exists in the database 
+    //if yes, continue
+    //else
+    //redirect to index.php
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -28,9 +28,12 @@ if(isset($_POST['sender']) && !empty(trim($_POST['sender']) ) ){
         $response = $appt->update_diagnosis( $appointmentID, $symptoms);
     }
     if($sender =='btn_prescription'){
+        //$appt->check_lab_status($apptID)
         $response = $appt->update_prescription( $appointmentID, $symptoms);
     }
     echo json_encode($response);
+
+   
 }
 
 if(isset($_POST['form']) && $_POST['form']=='terminate' ){

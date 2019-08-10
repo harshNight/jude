@@ -25,6 +25,14 @@
             return $stmt; 
      }
 
+     public function check_lab_status($apptID){  
+        $sql = "SELECT `lab_status` FROM `tbl_cases` WHERE `appointment_id` =:appt ";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bindParam(':appt',$apptID, PDO::PARAM_STR);
+        $stmt->execute();
+        return $stmt->rowCount(); 
+ }
+
      public function check_appointment_id($apptID){
         try {     
             return $this->appointment_query($apptID)->rowCount();
@@ -71,7 +79,7 @@
      public function update_diagnosis($apptID, $symptoms){
         $this->conn->beginTransaction();
        try {     
-           $sql = "UPDATE `tbl_cases` SET `diagnosis` = :symptoms, `service` = 1 WHERE `appointment_id` =:appt ";
+           $sql = "UPDATE `tbl_cases` SET `diagnosis` = :symptoms, `service` = 1, `lab_status` = 1 WHERE `appointment_id` =:appt ";
            $stmt = $this->conn->prepare($sql);
            $stmt->bindParam(':appt',$apptID, PDO::PARAM_STR);
            $stmt->bindParam(':symptoms', $symptoms, PDO::PARAM_STR);

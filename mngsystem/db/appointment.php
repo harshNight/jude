@@ -6,7 +6,8 @@
     private $conn;
 
     private function appt_number(){  // generates the query number of a patient
-            $sql = "SELECT IFNULL(COUNT(`case_id`),0) as appt_number FROM `tbl_cases` WHERE `date_created` = CURDATE();";
+            $sql = "SELECT IFNULL(COUNT(`case_id`),0) as appt_number FROM `tbl_cases` 
+            WHERE `date_created` = CURDATE();";
              $stmt = $this->conn->query($sql);
             return $stmt->fetch()['appt_number']+1;
         
@@ -28,11 +29,43 @@
         $stmt->execute();
         return $stmt;
     }
+    private function get_appointment_via_id($patientID){ // retrieves appintment data
+        $sql = "SELECT * FROM `tbl_cases` WHERE `patient_id` =:appt AND `service` = 0 ORDER BY `case_id` ASC limit 1";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bindParam(':appt',$patientID, PDO::PARAM_STR);
+        $stmt->execute();
+        return $stmt;
+    }
+    private function check_opened_appointment($appt){
+         // checks if the patient has not seen a doctor but has booked the apointment
+        $sql = "SELECT * FROM `tbl_cases` WHERE `patient_id` =:appt AND `service` = 0";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bindParam(':appt',$appt, PDO::PARAM_STR);
+        $stmt->execute();
+        return $stmt->rowCount();
+    }
+    
+    private function update_open_appointment_date($appt){
+        $sql = "UPDATE `tbl_cases` SET `date_created` = NOW() WHERE `patient_id` =:appt AND `service` = 0 ";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bindParam(':appt',$appt, PDO::PARAM_STR);
+        $stmt->execute();
+        return $stmt->rowCount();
+    }
+
      public function get_appointment($patientID){
         $this->conn->beginTransaction();
         try {
-            $this->create_appointment($patientID);
-            $stmt = $this->appointment($this->conn->lastInsertId()); 
+            if($this->check_opened_appointment($patientID)==0){
+                // creates new appointment
+                $this->create_appointment($patientID);
+                $stmt = $this->appointment($this->conn->lastInsertId()); 
+            }else{
+                // updates the appointment table
+                $this->update_open_appointment_date($patientID); 
+                $stmt = $this->get_appointment_via_id($patientID); 
+            }
+           
             $this->conn->commit();
             return $stmt->fetch(PDO::FETCH_ASSOC);
         } catch (\Throwable $th) {
