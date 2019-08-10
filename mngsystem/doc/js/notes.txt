@@ -1,0 +1,12 @@
+EXCEPTIONS
+
+the appointment api causes an auto generation of a new case. this is wrong
+check to make sure the source is reasonableand that the api is not used in
+ any other page except the p_acct page
+CREATING NEW APPOINTMENT
+When creating a new appointment, make sure that the patient id exists
+
+
+DBDIAGNOSIS
+when updated a column, ensure that the api is not trying to send an empty textarea
+in essence, sanitize each textarea

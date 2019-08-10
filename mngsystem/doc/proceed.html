@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: gray;
+            color:indigo;
+            box-sizing: border-box;
+        }
+        header{
+            min-height: 200px;
+        }
+        main{
+            display:grid;
+            grid-template-columns: [start-column]1fr [main-column]4fr [end-column]1fr;
+            justify-content: center;
+            align-items: center;
+        }
+        .wrapper{
+            grid-column: main-column;
+            background-color:#fff;
+            border-radius:5px;
+            padding:10px;
+        }
+        form{
+            display:grid;
+            grid-template-rows:repeat(minmax(0px, auto), 3);
+            border:1px solid rgb(87, 88, 87);
+        }
+        .form-group{
+            display:flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+        .input-group, .text-group{
+            background-color:#fff;
+            padding:10px;
+            display: flex;
+            flex-direction: column;
+            margin:auto;
+        }
+        .input-group{
+            width:calc(32%);
+        }
+        .text-group{
+            width:100%;
+        }
+        label{
+            font-weight: bold;
+            padding:3px;
+            text-transform: uppercase;
+        }
+        .alert{
+            display:flex;
+            justify-content: space-between;
+        }
+        #symptom-alert, #diagnosis-alert, #prescription-alert{
+            color:red;
+            display:none;
+        }
+        .btn-save{
+            margin-left:auto;
+            padding:5px 15px;
+            margin-top:5px;
+        }
+        .diagnose_action--wrapper{
+            align-self:flex-end;
+             font-size:1em; 
+             margin-top:0px;
+             padding:2px;
+             margin-left:auto;
+        }
+        .advise{
+            padding:5px 15px;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            border:1px solid rgb(196, 194, 194);
+            margin-right:-5px;
+            width:150px;
+        }
+        .final{
+            height:10px;
+            overflow:hidden;
+            transition-duration: 3000ms;
+            transition-property: height;
+            transition-timing-function: ease-in;
+        }
+
+        .show-final{
+            height: unset;
+           
+        }
+        .btn-group{
+            display:flex;
+            justify-content: center;
+            align-items:center;
+            margin-bottom: 10px;
+            margin-top:20px;
+        }
+        .btn-reset, .btn-submit{
+            padding:5px 20px;
+            font-weight:bold;
+        }
+        .btn-reset{
+            margin-right:20px;
+        }
+
+        footer{
+            margin-bottom:40px;
+        }
+    </style>
+</head>
+<body>
+   <header>
+
+   </header>
+   <main>
+       <div class="wrapper">
+            <form action="" id="form_diagnosis">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <label for="patient_ID">Patient ID</label>
+                            <input type="text" name="patient_ID" id="patient_ID">
+                        </div>
+                        <div class="input-group">
+                            <label for="appointment_id">APPOINTMENT ID</label>
+                                <input type="text" name="appointment_id" id="appointment_id">
+                           
+                        </div>
+                        <div class="input-group">
+                            <label for="date_created">DATE</label>
+                                <input type="text" name="date_created" id="date_created">
+                        </div>
+                       
+                       
+                       
+                    </div>
+                <div class="form-group">
+                    <div class="text-group">
+                            <label for="symptoms">Enter symptoms </label>
+                            <textarea name="symptoms" id="symptoms" cols="30" rows="10"></textarea>
+                            <div class="alert">
+                                <span id="symptom-alert">symptoms cannot be empty</span>
+                                <button class="btn-save" id="btn_symptom">save</button>  
+                            </div>
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    <div class="text-group">
+                            <label for="symptoms">diagnosis</label>
+                            <textarea name="diagnosis" id="diagnosis" cols="30" rows="10"></textarea>
+                            <div class="alert">
+                                <span id="diagnosis-alert">diagnosis cannot be empty</span>
+                                <div class="diagnose_action--wrapper">
+                                    <select name="advise" id="advise" class="advise">
+                                        <option value="0">select Action</option>
+                                        <option value="1">Laboratory</option>
+                                        <option value="2">Prescription</option>
+                                    </select>
+                                    <button class="btn-save" id="btn_diagnosis" disabled>save</button>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="final">
+                    <div class="form-group">
+                        <div class="text-group">
+                            <label for="symptoms">precription / recomendation</label>
+                            <textarea name="prescription" id="prescription" cols="30" rows="5"></textarea>
+                            <div class="alert">
+                                    <span id="prescription-alert">precription cannot be empty</span>
+                                    <button class="btn-save" id="btn_prescription">save</button> 
+                                </div>
+                           
+                        </div>
+                    </div>                  
+                </div>
+                
+            </form>
+            <div class="btn-group" id="btn-group">
+                <button type="reset" class="btn-reset" id="btn-reset" disabled>Cancel Appointment</button>   
+                 <button type="submit" class="btn-submit" id="btn-submit" disabled>Save & Exit</button>
+            </div>
+       </div>
+   </main>
+   <footer>
+    <!-- CODE THE RESET AND CANCEL <BUTTON></BUTTON>
+    GO THROUGHT THE ENTIRE CODE FOR INSUFFICIENCY -->
+   </footer>
+   <script src="../js/jquery-3.4.1.min.js"></script>
+   <script src="./js/diagnosis.js"></script>
+</body>
+</html>

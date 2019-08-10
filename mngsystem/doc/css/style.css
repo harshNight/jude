@@ -1,0 +1,63 @@
+*{
+    padding:0;
+    margin:0;
+}
+header{
+    height:100px;
+    background-color:#acdeff;
+}
+main{
+    border:1px solid red;
+    display:grid;
+    justify-content: center;
+}
+
+#case_table{
+border-collapse: collapse;
+border:1px solid gray;
+padding:5px;
+}
+thead{
+    background-color:#000;
+    color:#fff;
+    padding:10px;
+    font-size: 1.1rem;
+}
+
+th{
+    padding:10px;
+    border:1px solid rgb(8, 8, 8);
+}
+td{
+ padding:5px 10px;   
+}
+tbody tr:nth-child(even){
+    background-color:rgb(200, 240, 250);
+}
+
+tbody td{
+    padding:15px 5px;
+}
+.btn_action{
+    padding:5px 10px;    
+    border-radius:2px;
+    border:none;
+    cursor:pointer;
+    font-weight:bold;
+    box-shadow: -1px -1px 3px #acacac,1px 1px 3px #acacac;
+    color:#fff;
+    margin:5px auto;
+}
+.btn-profile{
+    background-color:#efca22;;
+}
+.btn-history{
+    background-color:green;
+}
+.btn-proceed{
+    background-color:#aa2244;
+}
+
+#case_table a{
+    text-decoration: none;
+}

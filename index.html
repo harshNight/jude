@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>St. Jude Hospital</title>
+    <link rel="stylesheet" href="css/mystyle.css">
+    <link rel="stylesheet" href="./fontawesome/css/all.css" type="text/css" />
+    <script type="text/javascript" src="./js/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <div class="containe">
+        <header>
+            <nav>
+                <div class="brand-hamburger-container">
+                    <div class="brand">
+                        <h1>healthCare</h1>
+                    </div>
+                    <div class="hamburger-wrapper">
+                        <div class="hamburger"></div>
+                    </div>
+                </div>
+                <div class="menu">
+                    <div class="navigation-wrapper">
+                        <ul class="navigation">
+                            <li class="nav-items transparent-border">Home</li>
+                            <li class="nav-items transparent-border">Home</li>
+                            <li class="nav-items transparent-border">Home</li>
+                        </ul>
+                    </div>
+                    <div class="opening">
+                        <ul>
+                            <li>Opening:<span class="head-contact">Mon-Sun (24/7)</span></li>
+                            <li>Call:<span class="head-contact"> 08139291535</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </nav>
+            <div class="header-frame">
+                <div class="i-flashes">
+                    Best in laboratory Test
+
+                </div>
+            </div>
+        </header>
+        <div class="wrapper">
+            <section class="about">
+                <h1 class="heading">
+                    <i class="fas fa-book"></i> About us
+                </h1>
+                <div class="about-content">
+                    <div class="about-pic">
+                        <img src="./img/hospital/doctor.png" alt="St. Jude">
+                    </div>
+                    <div class="about-info">
+                        <h2>St. Jude Hospital </i></h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias est, nobis aut, in
+                            nostrum
+                            doloribus voluptatum cupiditate fugit sequi a eaque tenetur dicta obcaecati. Magni hic
+                            distinctio
+                            fugiat minus similique?</p>
+                    </div>
+                </div>
+            </section>
+            <section class="booking">
+                <h1 class="booking-heading">
+                    <i class="fas fa-book-medical"></i> Book an Appointment
+                </h1>
+                <form action="#" class="appointment-form" id="appointmentForm">
+                    <div class="form-group">
+                        <input type="text" name="User_name" placeholder="fullname" id="username"
+                            pattern="[A-Za-z \w+]{1,}">
+                        <span class="span-general" id="user"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="user_phone" placeholder="phone" id="phone">
+                        <span class="span-general" id="user"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="user_email" placeholder="email" id="email">
+                        <span class="span-general" id="user"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="date" name="schedule_date" id="schedule_date">
+                        <span class="span-general" id="user"></span>
+                    </div>
+                    <div class="form-group">
+                        <select name="type" id="booking_type">
+                            <option value="Checkup" selected>Check up</option>
+                            <option value="Antinatal">Antinatal</option>
+                            <option value="Advice">Advice</option>
+                            <option value="Others">Others</option>
+                        </select>
+                    </div>
+                    <input type="submit" name="appointment" value="Proceed" class="btn-book">
+                </form>
+                <div class="quick-contact">
+                    <h4><i class="fas fa-phone"></i> 08139291535</h4>
+                    <h4><i class="fas fa-envelope"></i> St. Jude@yahoo.com</h4>
+                </div>
+            </section>
+
+            <section class="services">
+                <h1 class="heading tip-heading-left">
+                    Services
+                </h1>
+                <div class="service-container">
+                    <div class="department-service">
+                        <h3 class="service-heading">Departmental Services</h3>
+                        <ul class="department-list-items cur">
+                            <li> Family & Specialty medicine
+                                <div class="sub-list-controller plus fas fa-plus"></div>
+                                <div class="department-service-synopsis hide-service">
+                                    <div class="department-service-details ">
+                                        <img src="./img/hospital/smiling doctor.png" alt="" id="documentImg">
+                                        <div class="writeup" id="departmentWriteUp">
+                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam
+                                                exercitationem ab
+                                                consequuntur veniam sit, labore alias itaque culpa explicabo
+                                                adipisci
+                                                suscipit vero
+                                                incidunt
+                                                unde, sequi reprehenderit quidem quia, ipsum fugit!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>fertility & genetics
+                                <span class="sub-list-controller plus fas fa-plus"></span>
+                                <div class="department-service-synopsis hide-service">
+                                    <div class="department-service-details ">
+                                        <img src="./img/hospital/doctor.png" alt="" id="documentImg">
+                                        <div class="writeup" id="departmentWriteUp">
+                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam
+                                                exercitationem ab
+                                                consequuntur veniam sit, labore alias itaque culpa explicabo
+                                                adipisci
+                                                suscipit vero
+                                                incidunt
+                                                unde, sequi reprehenderit quidem quia, ipsum fugit!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li id=' maternity'>maternity</li>
+                            <li id='paediatrics'>paediatrics & neomatology</li>
+                            <li id='dental'>dental clinic</li>
+                            <li id='eye'>eye clinic</li>
+                        </ul>
+                    </div>
+                    <div class="support-service">
+                        <h3 class="service-heading">support services</h3>
+                        <ul class="service-list-items">
+                            <li>Diagonotics/Laboratory</li>
+                            <li>pharmacy</li>
+                            <li>radiology</li>
+                            <li>blood bank</li>
+                            <li>managed care</li>
+                            <li>medical records</li>
+                            <li>Home care</li>
+
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="daily-tips">
+                <div class="tips-wrapper">
+                    <div class="doctors-wrapper">
+                        <div class="doctor-arrow-left show-arrow">
+                            &larr;
+                        </div>
+                        <div class="doctor-arrow-right show-arrow">
+                            &rarr;
+                        </div>
+
+                        <h1 class="heading tip-heading-left">
+                            Our Doctors
+                        </h1>
+                        <div class="cbn">
+                            <div class="doctor-div current-slider">
+                                <img src="./img/hospital/single.jpg" class="doctors-img" alt="" />
+                                <div class="doctors-profile">
+                                    <h3 class="doctors-name">
+                                        omokpo Gabriel
+                                    </h3>
+                                    <h4 class="doctors-area">
+                                        NeuroSurgery
+                                    </h4>
+                                    <div class="doctors-history">
+                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti omnis sit
+                                        quasi
+                                        odit cupiditate dolor. Culpa, vel ut quia natus nulla veritatis quas cupiditate
+                                        quae, amet voluptatem cum nesciunt vero?
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="doctor-div">
+                                <img src="./img/hospital/male_doc_with_child .jpeg" class="doctors-img" alt="" />
+                                <div class="doctors-profile">
+                                    <h3 class="doctors-name">
+                                        omokpo Gabriel
+                                    </h3>
+                                    <h4 class="doctors-area">
+                                        NeuroSurgery
+                                    </h4>
+                                    <div class="doctors-history">
+                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti omnis sit
+                                        quasi
+                                        odit cupiditate dolor. Culpa, vel ut quia natus nulla veritatis quas cupiditate
+                                        quae, amet voluptatem cum nesciunt vero?
+                                    </div>
+                                </div>
+                                <div class="doctor-social">
+                                    <i class="fas fa-facebook"></i>
+                                </div>
+                            </div>
+                            <div class="doctor-div">
+                                <img src="./img/hospital/stitoscope.jpeg" class="doctors-img" alt="" />
+                                <div class="doctors-profile">
+                                    <h3 class="doctors-name">
+                                        omokpo Gabriel
+                                    </h3>
+                                    <h4 class="doctors-area">
+                                        NeuroSurgery
+                                    </h4>
+                                    <div class="doctors-history">
+                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti omnis sit
+                                        quasi
+                                        odit cupiditate dolor. Culpa, vel ut quia natus nulla veritatis quas cupiditate
+                                        quae, amet voluptatem cum nesciunt vero?
+                                    </div>
+                                </div>
+                                <div class="doctor-social">
+                                    <i class="fas fa-facebook"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="tips">
+                        <h1 class="heading tip-heading-left">
+                            Today's Tips <i class="fas fa-lightbulb"></i>
+                        </h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem dolorem magni reiciendis
+                            eos
+                            pariatur, placeat modi autem delectus illo et commodi sed incidunt neque quia quas ratione
+                            suscipit
+                            qui tempore?Temporibus sint sit molestiae, odio consectetur ipsum omnis ad architecto, odit
+                            soluta
+                            doloribus tenetur magni nobis voluptatem et! Cupiditate aut corrupti repellendus eligendi
+                            quaerat ea
+                            perspiciatis ad vitae fuga nulla.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem dolorem magni reiciendis
+                            eos
+                            pariatur, placeat modi autem delectus illo et commodi sed incidunt neque quia quas ratione
+                            suscipit
+                            qui tempore?Temporibus sint sit molestiae, odio consectetur ipsum omnis ad architecto, odit
+                            soluta
+                            doloribus tenetur magni nobis voluptatem et! Cupiditate aut corrupti repellendus eligendi
+                            quaerat ea
+                            perspiciatis ad vitae fuga nulla.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <h1 class="foot-heading">We help millions of people stay healthy & live better lives.</h1>
+        <div class="summary">
+            <div class="summary_subs-container">
+                <div class="summary-sub-writeup">
+                    <p>Each month, over 2.8 million people use Slant to find the best products and share their
+                        knowledge.
+                        Pick
+                        the tags you’re passionate about to get a personalized feed and begin contributing your
+                        knowledge.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, blanditiis eligendi alias ad
+                        aliquid distinctio doloremque hic consequatur qui molestiae culpa porro dolorem eveniet amet
+                        odit? Dolore debitis error officia.
+                    </p>
+
+                </div>
+                <div class="summary-sub-quicklinks">
+                    <h3 class="Quicklinks-heading">QuickLinks</h3>
+                    <div class="quicklinks">
+                        <a href="#">Home</a>
+                        <a href="#">Services</a>
+                        <a href="#">About</a>
+                        <a href="write_us">Write us</a>
+                        <a href="contact_us">Contact us</a>
+                        <a href="#">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="useful-links">
+            <h4 class="processing">To get updates directly</h4>
+            <form action="" class="subscribe">
+                <input type="email" name="subscribe" placeholder="john@gmail.com">
+                <button name="subscribe" class="subscribe-button">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+            <aside class="addr">
+                <address>
+                    Plot 50 Johnson Way,<br /> Lagos State,<br /> Nigeria.
+                </address>
+                <tel>
+                    <i class="fa fa-phone"></i> 08139291535
+                </tel>
+                <strong class="email-addr">Support@SaintJudeHospital.com<strong>
+            </aside>
+        </div>
+    </footer>
+    <div class="sponsors">
+        <h3 class="sponsor-label">Designed by<span class="designer"> GabbyTech &copy;2019</span></h3>
+    </div>
+    <div class="mobile-wrapper">
+        <button class="mobile-appointment-btn">
+            <i class="fas fa-book-medical"></i>
+        </button>
+        <div class="mobile-appointment">
+            <div class="mobile-appointment-heading">
+                <h3 class="mobile-h3">
+                    <i class="fas fa-book-medical"></i> Book an Appointment
+                </h3>
+                <span class="mobile-appointment-form-close">
+                    <i class="fas fa-close">X</i>
+                </span>
+            </div>
+
+            <form action="#" class="mobile-appointment-form" id="appointmentForm">
+                <input type="text" name="User_name" placeholder="fullname" class="form-control">
+                <input type="text" name="user_phone" placeholder="phone" class="form-control">
+                <input type="email" name="user_email" placeholder="email" class="form-control">
+                <input type="date" name="schedule_date" class="form-control">
+                <select name="type" class="form-control">
+                    <option value="checkup" selected>Check up</option>
+                    <option value="Antinatal">Antinatal</option>
+                    <option value="Advice">Advice</option>
+                    <option value="others">Others</option>
+                </select>
+                <input type="submit" name="appointment" value="Proceed" class="btn-book">
+            </form>
+            <div class="quick-contact">
+                <h4><i class="fas fa-phone"></i> 08139291535</h4>
+                <h4><i class="fas fa-envelope"></i> St. Jude@yahoo.com</h4>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/scripts.js"></script>
+    <script src="./js/booking_form.js"></script>
+
+</body>
+
+</html>

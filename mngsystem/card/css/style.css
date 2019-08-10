@@ -1,0 +1,286 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+  font-family: sans-serif;
+  background-color:rgb(173, 172, 172)
+}
+.container{
+  min-height: 100%;
+  width:70%;
+  margin:auto;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* NAVIGATION  */
+.header{
+    margin-top:50px;
+    display:flex;
+    background-color:rgb(44, 42, 42);
+    justify-content: center;
+    align-items: center;
+    padding:10px;
+    min-height:50px;
+    color:#fff;
+    box-shadow: 1px 0px 3px rgb(181, 181, 182), -1px -1px 3px rgb(181, 181, 182);
+}
+.form-general{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ border:1px solid rgb(164, 165, 165);
+  min-height: 100vh;
+}
+
+.form-general .form-group{
+  padding:0px 10px;
+  margin-bottom: 10px;
+}
+.navbar{
+  list-style:none;
+  display:flex;
+  flex-direction: row;
+  position: relative;
+  color:#fff;   
+  cursor: pointer;
+}
+.nav-item{
+  padding:10px;
+  border-right:1px solid rgba(230, 228, 228, 0.5);
+  /* box-shadow: 1px 1px 3px rgb(147, 216, 243), -1px -1px 3px rgb(147, 216, 243); */
+  width:100px;
+}
+.nav-link{
+  text-decoration:none;
+  color:#fff;
+}
+.sub-file{
+  position:absolute;
+  top:40px;
+  left:0;
+  list-style:none;
+  z-index:2;
+  background-color:rgb(165, 14, 165);
+  padding:10px 20px;
+  border-radius:5px;
+}
+.sub-file .sub-nav-item{
+  margin-bottom:20px;
+}
+
+
+.wrapper{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:Center;
+  margin:auto;
+  min-height:80vh;
+}
+.profile-wrapper{
+  display:flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items:Center;
+  margin:auto;
+  min-height:80vh;
+  margin-bottom: 20px;
+}
+.form-wrapper,.result-container{
+  margin:auto;
+  border:1px solid pink;
+  padding:20px;
+  border-radius:5px;
+}
+
+#patient-search-form,#patient-fullsearch-form, .search_result{
+  margin:auto;
+  display:flex;
+  flex-direction: column;
+}
+#patient-fullsearch-form{
+  display:none;
+}
+.input-group{
+  padding:10px 30px;
+}
+.patientID,.patientName{
+  border-radius:3px;
+  padding: 5px;
+  border:1px solid gray;
+}
+
+#patient_btn{
+ border:1px solid hidden;
+ padding:5px;
+ align-self:center;
+ margin-bottom:25px;
+ cursor: pointer;
+}
+.span-info{
+  color: #51c4fa;
+  cursor:pointer;
+  margin-top:5px;
+  text-transform: capitalize;
+}
+.error-tag{
+  color:#eee;
+  transform:scale(0,1);
+  transform-origin: top;
+  transition-property: transform;
+  transition-duration:500ms;
+  transition-timing-function: ease-in;
+}
+.result-table, .result-table td{
+  border:1px solid darkorchid;
+  padding:10px;
+  border-collapse: collapse;
+}
+
+
+.type-select
+{
+  padding:5px 10px;
+  border-radius:3px;
+  border:1px solid gray;
+  width:250px;
+}
+
+.select-control,
+.date-control{
+  padding:5px 10px;
+  border-radius:3px;
+  border:1px solid gray;
+  width:150px;
+}
+
+.form-general .form-group input[type='text'], 
+.form-general .form-group input[type='tel']{
+  padding:5px 10px;
+  border-radius:3px;
+  border:1px solid rgb(173, 172, 172);
+  width:300px;
+}
+
+.card-form{
+  background-color:rgb(255, 255, 255);
+  width:100%;
+  
+  /* box-shadow: 1px 0px 3px rgb(181, 181, 182), -1px -1px 3px rgb(181, 181, 182); */
+}
+.input-group:nth-of-type(odd)
+{
+  background-color:rgba(245, 249, 250, 0.719);
+}
+.input-group:nth-of-type(even)
+{
+  background-color:rgba(242, 246, 247, 0.651);
+  color:rgb(20, 18, 18);
+}
+.form-general .input-group{
+  display:flex;
+  flex-direction: row;
+  width:80%;
+  margin:auto;
+  /* border:1px solid rgb(231, 231, 231); */
+}
+.kin{
+  border:1px outset rgb(195, 197, 195);
+}
+.bio-heading{
+  margin:auto;
+  padding:10px;
+  text-align:center;
+}
+.kin-heading{
+  margin:auto;
+  text-align: center;
+  padding: 10px;
+}
+
+.btn_create-account{
+ align-self: center;
+ margin:auto;
+ padding:5px 10px;
+ font-weight: bold;
+ cursor:pointer;
+ /* border-radius:5px; */
+ /* border:none; */
+}
+.company-control{
+  padding:5px 10px;
+  border:1px solid gray;
+  border-radius:5px;
+}
+
+.profile-wrapper{
+  background-color:#fff;
+   padding:10px;
+   min-width:50%;
+}
+
+.profile-table{
+  border:1px solid red;
+  width:100%;
+  border-collapse: collapse;
+  padding:10px;
+}
+
+  .table-head{
+    background-color:green;
+    width:100%;
+    padding:10px;
+    text-align:center;
+    color:#fff;
+  }
+
+  .ID-label{
+    color:#fff;
+    font-weight: bolder;
+    /* border:1px solid white; */
+    font-size:1.2rem;
+  }
+
+  td{
+    border:1px solid rgb(88, 88, 86);
+    padding:10px;
+  }
+
+.appointment-wrapper{
+  border-radius:4px;
+  background-color:rgba(220, 220, 224, 0.5);
+  padding:10px;
+  min-width:400px;
+  min-height:10px;
+}
+.appointment-section,.appointment-section-close {
+  display:grid;
+  grid-template-columns:1fr;
+  padding:10px;
+  font-weight: bold;
+  /* box-shadow:1px 2px 3px rgb(181, 181, 182), -1px -1px 3px rgb(181, 181, 182); */
+}
+.appointment-section .btn-create, .appointment-section-close .btn-create{
+  padding:10px; 
+  font-weight: bold;
+  box-shadow:1px 2px 3px rgb(181, 181, 182), -1px -1px 3px rgb(181, 181, 182);
+  cursor:pointer;
+}
+.appointment-response{
+  background-color:#fff;
+  margin:auto;
+  /* padding:10px; */
+  text-align:center;
+}
+
+.appointment-section-close,.appointment-response{
+  transform:scale(1,0);
+  transform-origin: top;
+  transition-property: transform;
+  transition-duration: 100ms;
+  transition-timing-function: ease;
+}

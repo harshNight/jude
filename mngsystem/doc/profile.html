@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="./css/style.css" rel="stylesheet">
+    <script> console.log(localStorage.getItem('appointment_id'))  </script>
+</head>
+
+<body>
+    <header>
+        <nav>
+
+        </nav>
+    </header>
+    <main>
+        <h3 class="table-head">Appointment ID: <span id="span_patientID"> <?php echo $_GET['id']; ?> </h3>
+        <table id="profile_table">
+            <tbody>
+                <tr>
+                    <td>Firstname:</td>
+                    <td id="firstname"></td>
+                </tr>
+                <tr>
+                    <td>Othernames:</td>
+                    <td id="othernames"></td>
+                </tr>
+                <tr>
+                    <td>Patient Phone:</td>
+                    <td id="p_phone"></td>
+                </tr>
+                <tr>
+                    <td>Address:</td>
+                    <td id='p_addr'></td>
+                </tr>
+                <tr>
+                    <td>Origin:</td>
+                    <td id='p_origin'></td>
+                </tr>
+                <tr>
+                    <td>Gender:</td>
+                    <td id="p_gender"></td>
+                </tr>
+                <tr>
+                    <td>Marital Status:</td>
+                    <td id="p_m_status"></td>
+                </tr>
+                <tr>
+                    <td>Date of Birth:</td>
+                    <td id="p_birth"></td>
+                </tr>
+                <tr>
+                    <td>Occupation:</td>
+                    <td id="p_occupation"></td>
+                </tr>
+                <tr>
+                    <td>Religion:</td>
+                    <td id="p_religion"></td>
+                </tr>
+                <tr>
+                    <td>Card type:</td>
+                    <td id="c_cardtype"></td>
+                </tr>
+                <tr>
+                    <td>Category:</td>
+                    <td id="c_category"></td>
+                </tr>
+                <tr>
+                    <td>Date Created:</td>
+                    <td id="d_created"></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="./js/doc_profile.js" type="text/javascript"></script>
+</body>
+
+</html>

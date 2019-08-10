@@ -1,0 +1,302 @@
+@media only screen and (min-width:740px),(orientation:landscape){
+    nav{
+        justify-content: space-between;
+        align-items: center;
+        padding:0 20px;
+    }
+    .brand-hamburger-container{
+        display:flex;
+        width:30%;
+        justify-content: space-between;
+    }
+    .menu{
+        display:flex;
+        justify-content: space-between;
+        width:70%;
+    }
+    .navigation{
+        flex-direction: row;
+    }
+    .hamburger-wrapper{
+        height:auto;
+        padding:5px;
+        display:flex;
+        justify-content: center;
+        display:none;
+        cursor:pointer;
+    }
+    .hamburger,.hamburger::before, .hamburger::after{
+        width:30px;
+        position: relative;
+        margin:auto;
+        background-color:white;
+        height:3px;
+    }
+     .hamburger::before, .hamburger::after{
+        position:absolute;
+        content:'';
+    }
+
+    .hamburger::before{ 
+       top:-10px;
+    }
+    .hamburger::after{
+       top:10px;
+    } 
+    .nav-items{
+        padding:11px 15px;
+        margin-left:5px;
+        border:1px solid rgba(8, 214, 214,1);
+        border-radius:5px;
+        background-color: rgb(66, 63, 63);
+    }
+
+    .nav-items:hover{
+        border:1px solid rgba(8, 214, 214,.7);
+        border-radius:5px;
+    }
+    .opening{
+        font-size:0.8rem;
+        align-self: center;
+    }
+    .head-contact{
+        font-weight: lighter;
+        color: rgb(42, 225, 238);
+    }
+    .transparent-border{
+        border:1px outset rgba(249, 250, 250, 0.1);
+        box-shadow:inset 1px 1px 3px rgba(19, 20, 20, 0.514), inset -1px -1px 3px rgba(19, 20, 20, 0.514);
+    }
+    .header-frame{
+        height: 80vh;
+        background-image:url(../img/hospital/background.png);
+        background-position: center center;
+    }
+    .i-flashes{
+        padding:10px;
+        font-size:0.9rem;
+        }
+    .wrapper{
+        width:var(--width);
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, minmax(min-content,max-content));
+        margin-top:5px;      
+    }
+    
+
+    .about{
+        grid-row: 1/2;
+        grid-column: 1/3;
+        padding: auto 10px;
+    }
+   
+    .about-info{
+        margin-left:10px;
+        }
+
+    .booking{
+        grid-row: 1/2;
+        grid-column: 3/4;
+        padding:10px 15px;
+        font-weight: lighter;
+        background-image: url("../img/appointment.png");
+        background-size: auto;
+    }
+
+    .services{
+        grid-row: 2/3;
+        grid-column: 1/-1;
+    }
+    .service-container{
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .daily-tips{
+        grid-row: 3/4;
+        grid-column: 1/-1;
+        padding:auto 5px;
+        
+    }
+
+
+    .tips-wrapper{
+        display:grid;
+        grid-template-columns: minmax(200px,300px) 2fr;
+        grid-template-rows:minmax(450px,1fr);
+        background-color: var(--body-color);
+    }
+    .doctors-wrapper{
+        grid-column: 1/2;
+        position: relative;
+        margin-right:20px;
+        box-shadow: 1px 1px 5px var(--body-color), -1px -1px 5px var(--body-color);
+        background-color:#fff;
+    }
+    /* .cbn{
+        margin:0 auto;
+        justify-content: flex-start;
+        transition:transform 500ms ease-in;
+        
+    } */
+    .doctor-div{
+         background-color:#fff;
+        display:flex;
+        flex-direction:column;
+        position:absolute;
+    }
+    .doctors-profile{
+        width:100%;
+        padding:5px;
+    }
+    .doctors-img{
+        width:278px;
+        height:auto;
+        object-fit: cover;
+        padding:5px;
+    }
+
+    .doctors-area{
+        color: rgba(70, 68, 73,.7);
+        margin-bottom:10px;
+    }
+    .doctor-arrow-left,.doctor-arrow-right{
+        top:60%;
+    }
+    .doctor-arrow-right{
+        right:5px;
+    }
+    .doctor-arrow-left{
+        left:5px;
+    }
+
+    .tips{
+        padding:10px 30px;
+        grid-column: 2/3;
+    }
+    .tip-heading-left{
+        text-align: left;
+        margin-left:10px;
+    }
+    
+    
+  
+
+    /* FORM */
+    .appointment-form{
+         display:flex;
+        flex-direction: column;
+        justify-content: center; 
+    }
+    .form-group{
+        width:90%;
+        display:flex;
+        flex-direction: column;
+        margin:auto;
+        margin-bottom:10px;
+    }
+    .form-group span{
+        font-size:0.8rem;
+        margin-left:10px;
+        font-weight: bold;
+    }
+    .span-general{
+        color:white;
+    }
+    .span-info{
+        color:rgb(43, 243, 43);
+    }
+    .span-danger{
+        color:red;
+    }
+
+    .appointment-form input:not([type="submit"]),   .appointment-form select{
+        padding:5px 10px;
+        border:1px solid var(--body-color);
+        font-size:15px;
+        border-radius:2px;
+        font-weight: lighter;
+        
+    }
+    .quick-contact{
+        color:#08cece;
+        text-align:center;
+        margin-top:20px;
+        border-top:1px solid var(--body-color);
+        font-size:13px;
+        padding:10px auto;
+        border-radius:5px;
+    }
+
+    .quick-contact h4{
+        font-weight: lighter;
+        padding:10px auto;
+        margin:10px auto;
+    }
+  }
+  
+  footer{
+      width:var(--width);
+    grid-template-columns:2fr 1fr;
+    grid-column-gap: 5px;
+    margin:auto;
+    }
+
+    .foot-heading{
+        grid-column: 1/-1;
+        font-weight: bolder;
+        margin-bottom: 30px;
+        }
+    .summary{
+    grid-column: 1/2;
+    }
+        .summary_subs-container{
+        grid-template-columns: 2fr 1fr;;
+        }
+        .summary-sub-writeup{
+        grid-column: 1/2;
+        }
+        .summary-sub-quicklinks{
+        grid-column: 2/3;
+        }
+
+        .quicklinks{
+            flex-direction: column;            
+        }
+        
+      
+        .summary-sub-quicklinks a:hover{
+        color:rgb(188, 184, 197);
+        font-style: oblique;
+        }
+        .Quicklinks-heading{
+        color:rgb(255, 255, 255);
+        margin-bottom: 10px;        
+        }
+        
+        
+        
+        .useful-links{
+        grid-column:2/3;
+        }
+
+        address,tel{
+        margin-top:20px;
+        font-size:.9rem;
+        }
+          
+       
+
+        .subscribe-button{
+        width:25%;
+        }
+
+        .mobile-appointment,.mobile-wrapper{
+            display:none;
+            }
+
+    .hide-arrow{
+        transform: scale(0,0);
+    }
+    .show-arrow{
+        transform: scale(1,1);
+    }
